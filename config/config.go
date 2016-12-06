@@ -5,6 +5,7 @@ import (
 	"os"
 
 	"github.com/BurntSushi/toml"
+	"github.com/pkieltyka/ehpi/data"
 )
 
 var ErrNoConfFile = errors.New("no configuration file specified")
@@ -20,7 +21,7 @@ type Config struct {
 	} `toml:"logging"`
 
 	// [db]
-	// DB data.DBConf `toml:"db"`
+	DB data.DBConf `toml:"db"`
 }
 
 func New() *Config {

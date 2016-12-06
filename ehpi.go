@@ -9,6 +9,3 @@ type Ehpi struct {
 	Config *config.Config
 	DB     *data.DB
 }
-
-// type Context struct {
-// }

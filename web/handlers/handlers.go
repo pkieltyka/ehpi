@@ -3,10 +3,14 @@ package handlers
 import (
 	"net/http"
 
-	"github.com/pkieltyka/ehpi"
+	"github.com/pkieltyka/ehpi/data"
+	"github.com/pkieltyka/ehpi/server"
 )
 
 func ListTodos(w http.ResponseWriter, r *http.Request) {
-	app := r.Context().Value("app").(*ehpi.Ehpi)
+	app := server.AppContext(r)
+
+	_ = data.DB{}
+
 	w.Write([]byte("list todos.." + app.Config.ApiUrl))
 }

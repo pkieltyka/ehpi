@@ -12,7 +12,7 @@ build: bindir
 
 .PHONY: run
 run:
-	fresh -p ./cmd/ehpi -r '-config=./etc/ehpi.conf' -o ./bin/ehpi
+	fresh -p ./cmd/ehpi -r '-config=./etc/ehpi.conf' -w=./ -t=./bin -o ./bin/ehpi
 
 .PHONY: tools
 tools:
